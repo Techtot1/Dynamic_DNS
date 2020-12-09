@@ -1,0 +1,10 @@
+{
+    "aws_access_key": "ENTER-AWS-ACCESS-KEY-HERE",
+
+    "aws_secret_access_key": "ENTER-AWS-SECRET-KEY-HERE",
+
+    "hosted_zone_ID": "ENTER-HOST-ZONE-ID",
+
+    "record_name": "ENTER-RECORD-NAME-HERE"
+
+}
