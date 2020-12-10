@@ -1,5 +1,5 @@
-from subprocess import call
+from subprocess import run
 import time
 while True:
-    call(["py","Get_ip.py"])
-    time.sleep(30)
+    run(["/home/user/Dynamic_DNS/Get_ip.py"])
+    time.sleep(300)
