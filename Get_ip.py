@@ -14,7 +14,7 @@ except:
 
 
 
-
+ip_current =""
 #AWS Route53 Record updater
 with open(os.getcwd()+"/Config.json") as ConfigFile:
     Config = json.load(ConfigFile)
@@ -23,7 +23,7 @@ def Update_AWS():
 
 
 
-    ip_current = json_ip_check['New_ip']
+ 
     conn = route53.connect(
         aws_access_key_id=Config["aws_access_key"],
         aws_secret_access_key=Config["aws_secret_access_key"],
@@ -75,6 +75,7 @@ else:
         outfile.write(json_ip) 
         outfile.close()
         print("Ip updated to:",api_ip)
+    ip_current = json_ip_check['New_ip']
  
     Update_AWS()
 
