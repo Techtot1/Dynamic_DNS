@@ -75,7 +75,7 @@ else:
         outfile.write(json_ip) 
         outfile.close()
         print("Ip updated to:",api_ip)
-    ip_current = json_ip_check['New_ip']
+    ip_current = api_ip
  
     Update_AWS()
 
