@@ -9,9 +9,14 @@ import time
 
 #Gets your current WAN-IP 
 #Ipify is a free to use API without rate limits and no account/credentials needed
-api_ip = get("https://api.ipify.org").text
 
-#Opens the ip json file as read for checks later
+try:
+    api_ip = get("https://api.ipify.org").text
+except:
+    print("No Connection.")
+    exit()
+#Opens the ip json file as read for checks la
+# ter
 try:
     with open('ip.json', 'r') as Readfile:
             json_ip_check = json.load(Readfile)
@@ -69,8 +74,8 @@ else:
     ip = {
         "New_ip": api_ip,
         "Current_ip": api_ip,
-        "Old_ip": ip_current,
-        "Last_Change": datetime.now().strftime("%H:%M:%S")
+        "Old_ip": ip_current
+        "Last_Change": datetime.now().strftime("%H:%M:%S  %d:%m:%Y")
     }
     json_ip = json.dumps(ip, indent=4)
 
